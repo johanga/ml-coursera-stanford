@@ -62,23 +62,52 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+% 1
+yvec = zeros(m, num_labels);
+idx = sub2ind(size(yvec), 1:m, y');
+yvec(idx) = 1;
 
+X = [ones(m, 1) X];
+a2 = sigmoid( Theta1 * X' );
+a2 = [ones(1, m); a2];
+a3 = sigmoid( Theta2 * a2 );
 
+% J without regularization
+J = sum((-1 / m) * sum(sum(yvec .* log(a3') + (1 - yvec) .* log(1 - a3'))));
 
+% add regularization to J
+Theta1ExceptBias = Theta1(:,2:end);
+Theta2ExceptBias = Theta2(:,2:end);
+sumt1 = sum(sum(Theta1ExceptBias .^ 2));
+sumt2 = sum(sum(Theta2ExceptBias .^ 2));
+J += (lambda / (2 * m)) * (sumt1 + sumt2);
 
+% 2
+Delta1 = 0;
+Delta2 = 0;
 
+for i = 1:m
+   % feedforward propagation
+   a1 = X(i,:)';
+   z2 = Theta1 * a1;
+   a2 = [1; sigmoid(z2)];
+   z3 = Theta2 * a2;
+   a3 = sigmoid(z3);
+   % backpropagation
+   d3 = a3 - yvec(i,:)';
+   d2 = (Theta2ExceptBias' * d3) .* sigmoidGradient(z2);
+   % accumulate gradient
+   Delta2 += d3 * a2';
+   Delta1 += d2 * a1';
+end
 
+% gradient without regularization
+Theta1_grad = Delta1 / m;
+Theta2_grad = Delta2 / m;
 
-
-
-
-
-
-
-
-
-
-
+% add regularization to gradient
+Theta1_grad(:,2:end) += lambda / m * Theta1ExceptBias;
+Theta2_grad(:,2:end) += lambda / m * Theta2ExceptBias;
 
 % -------------------------------------------------------------
 
