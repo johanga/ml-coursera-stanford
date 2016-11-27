@@ -1,0 +1,71 @@
+﻿Machine Learning System Design Quiz.
+===============================================================================================================================================================
+Question 1.
+You are working on a spam classification system using regularized logistic regression. 
+"Spam" is a positive class (y = 1) and "not spam" is the negative class (y = 0). 
+You have trained your classifier and there are m = 1000 examples in the cross-validation set. The chart of predicted class vs. actual class is:
+
+	           | Actual Class: 1 | Actual Class: 0 |
+-------------------|-----------------|-----------------|
+Predicted Class: 1 |       85        |       890       |
+Predicted Class: 0 |       15        |        10       |
+
+For reference:
+Accuracy = (true positives + true negatives) / (total examples)
+Precision = (true positives) / (true positives + false positives)
+Recall = (true positives) / (true positives + false negatives)
+F1 score = (2 * precision * recall) / (precision + recall)
+
+What is the classifier's precision (as a value from 0 to 1)?
+Enter your answer in the box below. If necessary, provide at least two values after the decimal point.
+
+A. CORRECT. Precision = 0.087179
+A. CORRECT. Recall = 0.85
+A. CORRECT. F1 Score = 0.158138
+===============================================================================================================================================================
+Question 2.
+Suppose a massive dataset is available for training a learning algorithm. Training on a lot of data is likely to give good performance when two of the following conditions hold true.
+Which are the two?
+
+1. CORRECT. Our learning algorithm is able to represent fairly complex functions (for example, if we train a neural network or other model with a large number of parameters).
+2. WRONG.   The classes are not too skewed.
+3. CORRECT. A human expert on the application domain can confidently predict y when given only the features x (or more generally, if we have some way to be confident that x contains sufficient information to predict y accurately).
+4. WRONG.   When we are willing to include high order polynomial features of x (such as x21, x22, x1x2, etc.).
+5. WRONG.   We train a model that does not use regularization.
+6. CORRECT. We train a learning algorithm with a large number of parameters (that is able to learn/represent fairly complex functions).
+7. WRONG.   We train a learning algorithm with a small number of parameters (that is thus unlikely to overfit).
+8. CORRECT. The features x contain sufficient information to predict y accurately. (For example, one way to verify this is if a human expert on the domain can confidently predict y when given only x).
+===============================================================================================================================================================
+Question 3.
+Suppose you have trained a logistic regression classifier which is outputing hθ(x).
+Currently, you predict 1 if hθ(x)≥threshold, and predict 0 if hθ(x)<threshold, where currently the threshold is set to 0.5.
+Suppose you increase the threshold to 0.7. Which of the following are true? Check all that apply.
+
+1. CORRECT. The classifier is likely to now have higher precision.
+2. WRONG.   The classifier is likely to have unchanged precision and recall, but higher accuracy.
+3. WRONG.   The classifier is likely to have unchanged precision and recall, and thus the same F1 score.
+4. WRONG.   The classifier is likely to now have higher recall.
+5. WRONG.   The classifier is likely to have unchanged precision and recall, but lower accuracy.
+6. CORRECT. The classifier is likely to now have lower recall.
+8. WRONG.   The classifier is likely to now have lower precision.
+===============================================================================================================================================================
+Question 4.
+Suppose you are working on a spam classifier, where spam emails are positive examples (y=1) and non-spam emails are negative examples (y=0). 
+You have a training set of emails in which 99% of the emails are non-spam and the other 1% is spam. Which of the following statements are true? Check all that apply.
+
+1. WRONG.   If you always predict spam (output y=1), your classifier will have a recall of 0% and precision of 99%.
+2. CORRECT. If you always predict non-spam (output y=0), your classifier will have an accuracy of 99%.
+3. CORRECT. If you always predict non-spam (output y=0), your classifier will have a recall of 0%.
+4. CORRECT. If you always predict spam (output y=1), your classifier will have a recall of 100% and precision of 1%.
+5. CORRECT. A good classifierr should have both a high precision and high recall on the cross validation set.
+6. CORRECT. If you always predict non-spam (output y=0), your classifier will have 99% accuracy on the training set, and it will likely perform similarly on the cross validation set.
+7. WRONG.   If you always predict non-spam (output y=0), your classifier will have 99% accuracy on the training set, but it will do much worse on the cross validation set because it has overfit the training data.
+===============================================================================================================================================================
+Question 5.
+Which of the following statements are true? Check all that apply.
+
+1. CORRECT. The "error analysis" process of manually examining the examples which your algorithm got wrong can help suggest what are good steps to take (e.g., developing new features) to improve your algorithm's performance.
+2. WRONG.   If your model is underfitting the training set, then obtaining more data is likely to help.
+3. CORRECT. Using a very large training set makes it unlikely for model to overfit the training data.
+4. WRONG.   It is a good idea to spend a lot of time collecting a large amount of data before building your first version of a learning algorithm.
+5. WRONG.   After training a logistic regression classifier, you must use 0.5 as your threshold for predicting whether an example is positive or negative.

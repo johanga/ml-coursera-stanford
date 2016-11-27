@@ -1,0 +1,47 @@
+Machine Learning Unsupervised Learning Quiz.
+===============================================================================================================================================================
+Question 1.
+For which of the following tasks might K-means clustering be a suitable algorithm? Select all that apply.
+
+A. CORRECT. Given a set of news articles from many different news websites, find out what are the main topics covered.
+A. WRONG.   Given many emails, you want to determine if they are Spam or Non-Spam emails.
+A. WRONG.   Given historical weather records, predict if tomorrow's weather will be sunny or rainy.
+A. CORRECT. From the user usage patterns on a website, figure out what different groups of users exist.
+
+===============================================================================================================================================================
+Question 2.
+Suppose we have three cluster centroids mu1=[1,2], mu2=[-3,0] and mu3=[4,2]. Furthermore, we have a training example x(i)=[3,1]. 
+After a cluster assignment step, what will c(i) be?
+
+A. WRONG.   c(i) = 2
+A. WRONG.   c(i) is not assigned
+A. WRONG.   c(i) = 1
+A. CORRECT. c(i) = 3
+
+===============================================================================================================================================================
+Question 3.
+K-means is an iterative algorithm, and two of the following steps are repeatedly carried out in its inner-loop. Which two?
+
+A. WRONG.   The cluster centroid assignment step, where each cluster centroid mu_i is assigned (by setting c(i)) to the closest training example x(i).
+A. WRONG.   Move each cluster centroid mu_k, by setting it to be equal to the closest training example x(i)
+A. CORRECT. Move the cluster centroids, where the centroids mu_k are updated.
+A. CORRECT. The cluster assignment step, where the parameters c(i) are updated.
+
+===============================================================================================================================================================
+Question 4.
+Suppose you have an unlabeled dataset {x(1),…,x(m)}. You run K-means with 50 different random initializations, and obtain 50 different clusterings of the
+data. What is the recommended way for choosing which one of these 50 clusterings to use?
+
+A. WRONG.   The only way to do so is if we also have labels y(i) for our data.
+A. CORRECT. For each of the clusterings, compute 1/m*sum(||x(i)-mu_c(i)||^2) for i=1,m, and pick the one that minimizes this.
+A. WRONG.   The answer is ambiguous, and there is no good way of choosing.
+A. WRONG.   Always pick the final (50th) clustering found, since by that time it is more likely to have converged to a good solution.
+
+===============================================================================================================================================================
+Question 5.
+Which of the following statements are true? Select all that apply.
+
+A. WRONG.   Since K-Means is an unsupervised learning algorithm, it cannot overfit the data, and thus it is always better to have as large a number of clusters as is computationally feasible.
+A. CORRECT. If we are worried about K-means getting stuck in bad local optima, one way to ameliorate (reduce) this problem is if we try using multiple random initializations.
+A. CORRECT. For some datasets, the "right" or "correct" value of K (the number of clusters) can be ambiguous, and hard even for a human expert looking carefully at the data to decide.
+A. WRONG.   The standard way of initializing K-means is setting mu_1=...=mu_k to be equal to a vector of zeros.

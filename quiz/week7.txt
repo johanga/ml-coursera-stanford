@@ -1,0 +1,52 @@
+Machine Learning Support Vector Machines Quiz.
+===============================================================================================================================================================
+Question 1.
+Suppose you have trained an SVM classifier with a Gaussian kernel, and it learned the following decision boundary on the training set:
+http://spark-public.s3.amazonaws.com/ml/images/12.1-b.jpg
+When you measure the SVM's performance on a cross validation set, it does poorly. Should you try increasing or decreasing C? Increasing or decreasing sigma^2?
+
+A. WRONG.   It would be reasonable to try decreasing C. It would also be reasonable to try decreasing sigma^2.
+A. WRONG.   It would be reasonable to try increasing C. It would also be reasonable to try increasing sigma^2.
+A. WRONG.   It would be reasonable to try increasing C. It would also be reasonable to try decreasing sigma^2.
+A. CORRECT. It would be reasonable to try decreasing C. It would also be reasonable to try increasing sigma^2.
+
+===============================================================================================================================================================
+Question 2.
+The figure below shows a plot of f1=similarity(x,l(1)) when sigma^2=1.
+http://spark-public.s3.amazonaws.com/ml/images/12.2-question.jpg
+Which of the following is a plot of f1 when sigma^2=1=0.25?
+
+A. CORRECT. http://spark-public.s3.amazonaws.com/ml/images/12.2-b.jpg
+A. WRONG.   http://spark-public.s3.amazonaws.com/ml/images/12.2-a.jpg
+A. WRONG.   http://spark-public.s3.amazonaws.com/ml/images/12.2-c.jpg
+A. WRONG.   http://spark-public.s3.amazonaws.com/ml/images/12.2-d.jpg
+
+===============================================================================================================================================================
+Question 3.
+This first term(of SVM min function) will be zero if two of the following four conditions hold true. 
+Which are the two conditions that would guarantee that this term equals zero?
+
+A. CORRECT. For every example with y(i)=1, we have that thata^T * x(i) >= 1.
+A. WRONG.   For every example with y(i)=0, we have that thata^T * x(i) <= 0.
+A. CORRECT. For every example with y(i)=0, we have that thata^T * x(i) <= -1.
+A. WRONG.   For every example with y(i)=1, we have that thata^T * x(i) >= 0.
+
+===============================================================================================================================================================
+Question 4.
+Suppose you have a dataset with n = 10 features and m = 5000 examples.
+After training your logistic regression classifier with gradient descent, you find that it has underfit the training set and does not achieve the desired performance on the training or cross validation sets.
+Which of the following might be promising steps to take? Check all that apply.
+
+A. CORRECT. Try using a neural network with a large number of hidden units.
+A. WRONG.   Use a different optimization method since using gradient descent to train logistic regression might result in a local minimum.
+A. CORRECT. Create / add new polynomial features.
+A. WRONG.   Reduce the number of examples in the training set.
+
+===============================================================================================================================================================
+Question 5.
+Which of the following statements are true? Check all that apply.
+
+A. WRONG.   If you are training multi-class SVMs with the one-vs-all method, it is not possible to use a kernel.
+A. CORRECT. The maximum value of the Gaussian kernel (i.e., sim(x,l(1))) is 1.
+A. WRONG.   If the data are linearly separable, an SVM using a linear kernel will return the same parameters Theta regardless of the chosen value of C (i.e., the resulting value of Theta does not depend on C).
+A. CORRECT. Suppose you have 2D input examples (ie, x(i) is R2). The decision boundary of the SVM (with the linear kernel) is a straight line.
