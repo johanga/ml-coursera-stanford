@@ -46,9 +46,9 @@ by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/mac
 ### Week 8
 - [X] Videos: Unsupervised Learning
 - [X] Quiz: Unsupervised Learning
-- [ ] Videos: Dimensionality Reduction
-- [ ] Quiz: Principal Component Analysis
-- [ ] Programming Assignment: K-Means Clustering and PCA
+- [X] Videos: Dimensionality Reduction
+- [X] Quiz: Principal Component Analysis
+- [X] Programming Assignment: K-Means Clustering and PCA
 
 ### Week 9
 - [ ] Videos: Anomaly Detection
