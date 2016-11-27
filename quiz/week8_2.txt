@@ -1,0 +1,40 @@
+Machine Learning Principal Component Analysis Quiz.
+===============================================================================================================================================================
+Question 1.
+
+A. Choose two answers(parallell vectors).
+
+===============================================================================================================================================================
+Question 2.
+Which of the following is a reasonable way to select the number of principal components k?
+(Recall that n is the dimensionality of the input data and m is the number of input examples.)
+
+A. WRONG.   Choose k to be the smallest value so that at least 1% of the variance is retained.
+A. WRONG.   Choose the value of k that minimizes the approximation error 1/m*sum(||x(i)-x(i)approx||^2) for i=1,m.
+A. CORRECT. Choose k to be the smallest value so that at least 99% of the variance is retained.
+A. WRONG.   Choose k to be 99% of n (i.e., k=0.99?n, rounded to the nearest integer).
+A. WRONG.   Use the elbow method.
+
+===============================================================================================================================================================
+Question 3.
+Suppose someone tells you that they ran PCA in such a way that "95% of the variance was retained." What is an equivalent statement to this?
+
+A. ? 1/m*sum(||x(i)-x(i)approx||^2) / 1/m*sum(||x(i)||^2) <= 0.05
+
+===============================================================================================================================================================
+Question 4.
+Which of the following statements are true? Check all that apply.
+
+A. WRONG.   PCA can be used only to reduce the dimensionality of data by 1 (such as 3D to 2D, or 2D to 1D).
+A. CORRECT. If the input features are on very different scales, it is a good idea to perform feature scaling before applying PCA.
+A. WRONG.   Feature scaling is not useful for PCA, since the eigenvector calculation (such as using Octave's svd(Sigma) routine) takes care of this automatically.
+A. CORRECT. Given an input x E R^n, PCA compresses it to a lower-dimensional vector z E R^k.
+
+===============================================================================================================================================================
+Question 5.
+Which of the following are recommended applications of PCA? Select all that apply.
+
+A. CORRECT. Data compression: Reduce the dimension of your input data x(i), which will be used in a supervised learning algorithm (i.e., use PCA so that your supervised learning algorithm runs faster).
+A. CORRECT. Data compression: Reduce the dimension of your data, so that it takes up less memory / disk space.
+A. WRONG.   Data visualization: To take 2D data, and find a different way of plotting it in 2D (using k=2).
+A. WRONG.   As a replacement for (or alternative to) linear regression: For most learning applications, PCA and linear regression give substantially similar results.
