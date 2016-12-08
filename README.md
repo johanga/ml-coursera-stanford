@@ -51,8 +51,8 @@ by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/mac
 - [X] Programming Assignment: K-Means Clustering and PCA
 
 ### Week 9
-- [ ] Videos: Anomaly Detection
-- [ ] Quiz: Anomaly Detection
+- [X] Videos: Anomaly Detection
+- [X] Quiz: Anomaly Detection
 - [ ] Videos: Recommender Systems
 - [ ] Quiz: Recommender Systems
 - [ ] Programming Assignment: Anomaly Detection and Recommender Systems
