@@ -53,8 +53,8 @@ by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/mac
 ### Week 9
 - [X] Videos: Anomaly Detection
 - [X] Quiz: Anomaly Detection
-- [ ] Videos: Recommender Systems
-- [ ] Quiz: Recommender Systems
+- [X] Videos: Recommender Systems
+- [X] Quiz: Recommender Systems
 - [ ] Programming Assignment: Anomaly Detection and Recommender Systems
 
 ### Week 10
