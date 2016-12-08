@@ -55,7 +55,7 @@ by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/mac
 - [X] Quiz: Anomaly Detection
 - [X] Videos: Recommender Systems
 - [X] Quiz: Recommender Systems
-- [ ] Programming Assignment: Anomaly Detection and Recommender Systems
+- [X] Programming Assignment: Anomaly Detection and Recommender Systems
 
 ### Week 10
 - [ ] Videos: Large Scale Machine Learning
