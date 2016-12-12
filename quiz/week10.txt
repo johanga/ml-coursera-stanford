@@ -1,0 +1,53 @@
+Machine Learning Large Scale Quiz.
+===============================================================================================================================================================
+Question 1.
+Suppose you are training a logistic regression classifier using stochastic gradient descent. You find that the cost (say, cost(Theta,(x(i),y(i))), 
+averaged over the last 500 examples), plotted as a function of the number of iterations, is slowly increasing over time. 
+Which of the following changes are likely to help?
+
+A. CORRECT. Try halving (decreasing) the learning rate alpha, and see if that causes the cost to now consistently go down; and if not, keep halving it until it does.
+A. WRONG.   Use fewer examples from your training set.
+A. WRONG.   Try averaging the cost over a smaller number of examples (say 250 examples instead of 500) in the plot.
+A. WRONG.   This is not possible with stochastic gradient descent, as it is guaranteed to converge to the optimal parameters Theta.
+
+===============================================================================================================================================================
+Question 2.
+Which of the following statements about stochastic gradient descent are true? Check all that apply.
+
+A. CORRECT. You can use the method of numerical gradient checking to verify that your stochastic gradient descent implementation is bug-free. (One step of stochastic gradient descent computes the partial derivative ???jcost(?,(x(i),y(i))).)
+A. WRONG.   In order to make sure stochastic gradient descent is converging, we typically compute Jtrain(?) after each iteration (and plot it) in order to make sure that the cost function is generally decreasing.
+A. WRONG.   Suppose you are using stochastic gradient descent to train a linear regression classifier. The cost function J(?)=12m?mi=1(h?(x(i))?y(i))2 is guaranteed to decrease after every iteration of the stochastic gradient descent algorithm.
+A. CORRECT. Before running stochastic gradient descent, you should randomly shuffle (reorder) the training set.
+
+===============================================================================================================================================================
+Question 3.
+Which of the following statements about online learning are true? Check all that apply.
+
+A. WRONG.   One of the advantages of online learning is that there is no need to pick a learning rate ?.
+A. CORRECT. In the approach to online learning discussed in the lecture video, we repeatedly get a single training example, take one step of stochastic gradient descent using that example, and then move on to the next example.
+A. CORRECT. When using online learning, in each step we get a new example (x,y), perform one step of (essentially stochastic gradient descent) learning on that example, and then discard that example and move on to the next.
+A. WRONG.   One of the disadvantages of online learning is that it requires a large amount of computer memory/disk space to store all the training examples we have seen.
+
+A. WRONG.   When using online learning, you must save every new training example you get, as you will need to reuse past examples to re-train the model even after you get new training examples in the future.
+A. CORRECT. One of the advantages of online learning is that if the function we're modeling changes over time (such as if we are modeling the probability of users clicking on different URLs, and user tastes/preferences are changing over time), the online learning algorithm will automatically adapt to these changes.
+A. CORRECT. Online learning algorithms are usually best suited to problems were we have a continuous/non-stop stream of data that we want to learn from.
+A. WRONG.   Online learning algorithms are most appropriate when we have a fixed training set of size m that we want to train on.
+
+===============================================================================================================================================================
+Question 4.
+Assuming that you have a very large training set, which of the following algorithms do you think can be parallelized using map-reduce and splitting the training set across different machines? 
+Check all that apply.
+
+A. CORRECT. Linear regression trained using batch gradient descent.
+A. WRONG.   Logistic regression trained using stochastic gradient descent.
+A. CORRECT. A neural network trained using batch gradient descent.
+A. WRONG.   An online learning setting, where you repeatedly get a single example (x,y), and want to learn from that single example before moving on.
+
+===============================================================================================================================================================
+Question 5.
+Which of the following statements about map-reduce are true? Check all that apply.
+
+A. CORRECT. If you have just 1 computer, but your computer has multiple CPUs or multiple cores, then map-reduce might be a viable way to parallelize your learning algorithm.
+A. CORRECT. In order to parallelize a learning algorithm using map-reduce, the first step is to figure out how to express the main work done by the algorithm as computing sums of functions of training examples.
+A. WRONG.   Running map-reduce over N computers requires that we split the training set into N2 pieces.
+A. CORRECT. When using map-reduce with gradient descent, we usually use a single machine that accumulates the gradients from each of the map-reduce machines, in order to compute the parameter update for that iteration.

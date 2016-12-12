@@ -58,8 +58,8 @@ by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/mac
 - [X] Programming Assignment: Anomaly Detection and Recommender Systems
 
 ### Week 10
-- [ ] Videos: Large Scale Machine Learning
-- [ ] Quiz: Large Scale Machine Learning
+- [X] Videos: Large Scale Machine Learning
+- [X] Quiz: Large Scale Machine Learning
 
 ### Week 11
 - [ ] Videos: Application Example: Photo OCR
