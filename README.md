@@ -62,5 +62,5 @@ by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/mac
 - [X] Quiz: Large Scale Machine Learning
 
 ### Week 11
-- [ ] Videos: Application Example: Photo OCR
-- [ ] Quiz: Application: Photo OCR
+- [X] Videos: Application Example: Photo OCR
+- [X] Quiz: Application: Photo OCR
