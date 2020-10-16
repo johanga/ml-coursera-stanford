@@ -1,3 +1,4 @@
+All answer are available 
 # Machine Learning
 by Andrew Ng, Stanford University, [Coursera](https://www.coursera.org/learn/machine-learning/home/welcome)
 
